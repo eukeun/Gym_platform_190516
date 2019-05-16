@@ -1,5 +1,6 @@
 package com.example.gym_platform;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -111,8 +112,8 @@ public class NavigationActivity extends AppCompatActivity
         /////
 
 
-        TextView tv = (TextView) findViewById(R.id.textView);
-        tv.setOnClickListener(new View.OnClickListener() {
+        TextView tvg = (TextView) findViewById(R.id.gym);
+        tvg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(NavigationActivity.this, GymActivity.class);
@@ -120,6 +121,15 @@ public class NavigationActivity extends AppCompatActivity
             }
         });
 
+
+        TextView tvt = (TextView) findViewById(R.id.trainer);
+        tvt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NavigationActivity.this, TrainerActivity.class);
+                startActivity(intent);
+            }
+        });
 
         temp = new ArrayList<>();
         temp.add(ContextCompat.getDrawable(this, R.drawable.default_dot));

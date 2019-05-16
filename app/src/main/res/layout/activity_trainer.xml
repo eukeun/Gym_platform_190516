@@ -30,14 +30,14 @@
 
 
                     <android.support.v4.view.ViewPager
-                        android:id="@+id/viewpager1"
+                        android:id="@+id/tviewpager1"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_weight="1"
                         android:background="#ffffff" />
 
                     <android.support.design.widget.TabLayout
-                        android:id="@+id/tab_layout"
+                        android:id="@+id/ttab_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#ffffff"
@@ -52,7 +52,7 @@
 
 
         <TabHost
-            android:id="@+id/tabhost"
+            android:id="@+id/ttabhost"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -64,7 +64,7 @@
                 android:orientation="vertical">
 
                 <TabWidget
-                    android:id="@android:id/tabs"
+                    android:id="@+id/ttabs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -84,7 +84,7 @@
                             android:layout_height="fill_parent">
 
                             <ScrollView
-                                android:id="@+id/tab1"
+                                android:id="@+id/ttab1"
                                 android:layout_width="fill_parent"
                                 android:layout_height="fill_parent">
 
@@ -98,7 +98,7 @@
                             </ScrollView>
 
                             <ScrollView
-                                android:id="@+id/tab2"
+                                android:id="@+id/ttab2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
@@ -106,14 +106,14 @@
                             </ScrollView>
 
                             <ScrollView
-                                android:id="@+id/tab3"
+                                android:id="@+id/ttab3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
                                 <include layout="@layout/fragment_trainer3" />
                             </ScrollView>
                             <ScrollView
-                                android:id="@+id/tab4"
+                                android:id="@+id/ttab4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
@@ -144,7 +144,7 @@
             android:layout_marginBottom="3dp">
 
             <Button
-                android:id="@+id/btnCall"
+
                 android:layout_width="904px"
                 android:layout_height="186px"
                 android:layout_marginLeft="61px"
@@ -154,7 +154,7 @@
                 android:textColor="@drawable/clickabletext" />
 
             <Button
-                android:id="@+id/btnMessage"
+
                 android:layout_width="357px"
                 android:layout_height="186px"
                 android:layout_marginRight="63px"

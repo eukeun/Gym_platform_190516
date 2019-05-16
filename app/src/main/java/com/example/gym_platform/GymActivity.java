@@ -42,10 +42,10 @@ public class GymActivity extends AppCompatActivity {
 
         Adapter a = new Adapter(temp, this);
 
-        ViewPager pager = findViewById(R.id.viewpager1);
+        ViewPager pager = findViewById(R.id.gviewpager1);
         pager.setAdapter(a);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.gtab_layout);
         tabLayout.setupWithViewPager(pager, true);
 
 
@@ -54,7 +54,7 @@ public class GymActivity extends AppCompatActivity {
         listImage1.add(R.drawable.bbb);
         listImage1.add(R.drawable.ccc);
 
-        ViewPager viewPager1 = findViewById(R.id.viewpager1);
+        ViewPager viewPager1 = findViewById(R.id.gviewpager1);
         FragmentAdapter fragmentAdapter1 = new FragmentAdapter(getSupportFragmentManager());
 
         viewPager1.setAdapter(fragmentAdapter1);

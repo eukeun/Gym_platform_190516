@@ -71,7 +71,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, JoinActivity.class));
-                finish();
             }
         });
 
