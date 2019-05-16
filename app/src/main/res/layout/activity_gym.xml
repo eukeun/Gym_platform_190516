@@ -17,6 +17,7 @@
             android:fitsSystemWindows="true">
 
             <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collpaseBar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
@@ -44,10 +45,6 @@
                         app:tabGravity="center"
                         app:tabIndicatorHeight="0dp" />
 
-                    <android.support.v7.widget.Toolbar
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_collapseMode="pin" />
                 </LinearLayout>
 
             </android.support.design.widget.CollapsingToolbarLayout>
