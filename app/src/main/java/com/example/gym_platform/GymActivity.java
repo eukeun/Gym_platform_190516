@@ -18,7 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TabHost;
-import android.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +33,6 @@ public class GymActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gym);
 
 
-
         temp = new ArrayList<>();
         temp.add(ContextCompat.getDrawable(this, R.drawable.default_dot));
         temp.add(ContextCompat.getDrawable(this, R.drawable.default_dot));
@@ -42,10 +40,10 @@ public class GymActivity extends AppCompatActivity {
 
         Adapter a = new Adapter(temp, this);
 
-        ViewPager pager = findViewById(R.id.gviewpager1);
+        ViewPager pager = findViewById(R.id.viewpager1);
         pager.setAdapter(a);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.gtab_layout);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(pager, true);
 
 
@@ -54,7 +52,7 @@ public class GymActivity extends AppCompatActivity {
         listImage1.add(R.drawable.bbb);
         listImage1.add(R.drawable.ccc);
 
-        ViewPager viewPager1 = findViewById(R.id.gviewpager1);
+        ViewPager viewPager1 = findViewById(R.id.viewpager1);
         FragmentAdapter fragmentAdapter1 = new FragmentAdapter(getSupportFragmentManager());
 
         viewPager1.setAdapter(fragmentAdapter1);
@@ -68,22 +66,22 @@ public class GymActivity extends AppCompatActivity {
         fragmentAdapter1.notifyDataSetChanged();
 
 
-        TabHost tab_host = (TabHost) findViewById(R.id.gtabhost);
+        TabHost tab_host = (TabHost) findViewById(R.id.tabhost);
         tab_host.setup();
 
-        TabHost.TabSpec ts1 = tab_host.newTabSpec("gtab1");
+        TabHost.TabSpec ts1 = tab_host.newTabSpec("tab1");
         ts1.setIndicator("상품");
-        ts1.setContent(R.id.gtab1);
+        ts1.setContent(R.id.tab1);
         tab_host.addTab(ts1);
 
-        TabHost.TabSpec ts2 = tab_host.newTabSpec("gtab2");
+        TabHost.TabSpec ts2 = tab_host.newTabSpec("tab2");
         ts2.setIndicator("정보");
-        ts2.setContent(R.id.gtab2);
+        ts2.setContent(R.id.tab2);
         tab_host.addTab(ts2);
 
-        TabHost.TabSpec ts3 = tab_host.newTabSpec("gtab3");
+        TabHost.TabSpec ts3 = tab_host.newTabSpec("tab3");
         ts3.setIndicator("리뷰");
-        ts3.setContent(R.id.gtab3);
+        ts3.setContent(R.id.tab3);
         tab_host.addTab(ts3);
 
         tab_host.setCurrentTab(0);

@@ -29,6 +29,8 @@ public class TrainerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trainer);
+
+
         temp = new ArrayList<>();
         temp.add(ContextCompat.getDrawable(this, R.drawable.default_dot));
         temp.add(ContextCompat.getDrawable(this, R.drawable.default_dot));
@@ -36,10 +38,10 @@ public class TrainerActivity extends AppCompatActivity {
 
         TrainerActivity.Adapter a = new TrainerActivity.Adapter(temp, this);
 
-        ViewPager pager = findViewById(R.id.tviewpager1);
+        ViewPager pager = findViewById(R.id.viewpager1);
         pager.setAdapter(a);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.ttab_layout);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(pager, true);
 
 
@@ -48,7 +50,7 @@ public class TrainerActivity extends AppCompatActivity {
         listImage1.add(R.drawable.bbb);
         listImage1.add(R.drawable.ccc);
 
-        ViewPager viewPager1 = findViewById(R.id.tviewpager1);
+        ViewPager viewPager1 = findViewById(R.id.viewpager1);
         TrainerActivity.FragmentAdapter fragmentAdapter1 = new TrainerActivity.FragmentAdapter(getSupportFragmentManager());
 
         viewPager1.setAdapter(fragmentAdapter1);
@@ -62,27 +64,27 @@ public class TrainerActivity extends AppCompatActivity {
         fragmentAdapter1.notifyDataSetChanged();
 
 
-        TabHost tab_host = (TabHost) findViewById(R.id.ttabhost);
+        TabHost tab_host = (TabHost) findViewById(R.id.tabhost);
         tab_host.setup();
 
-        TabHost.TabSpec ts1 = tab_host.newTabSpec("ttab1");
+        TabHost.TabSpec ts1 = tab_host.newTabSpec("tab1");
         ts1.setIndicator("수업소개");
-        ts1.setContent(R.id.ttab1);
+        ts1.setContent(R.id.tab1);
         tab_host.addTab(ts1);
 
-        TabHost.TabSpec ts2 = tab_host.newTabSpec("ttab2");
+        TabHost.TabSpec ts2 = tab_host.newTabSpec("tab2");
         ts2.setIndicator("커리큘럼");
-        ts2.setContent(R.id.ttab2);
+        ts2.setContent(R.id.tab2);
         tab_host.addTab(ts2);
 
-        TabHost.TabSpec ts3 = tab_host.newTabSpec("ttab3");
+        TabHost.TabSpec ts3 = tab_host.newTabSpec("tab3");
         ts3.setIndicator("장소/시간");
-        ts3.setContent(R.id.ttab3);
+        ts3.setContent(R.id.tab3);
         tab_host.addTab(ts3);
 
-        TabHost.TabSpec ts4 = tab_host.newTabSpec("ttab4");
-        ts3.setIndicator("리뷰");
-        ts3.setContent(R.id.ttab4);
+        TabHost.TabSpec ts4 = tab_host.newTabSpec("tab4");
+        ts4.setIndicator("리뷰");
+        ts4.setContent(R.id.tab4);
         tab_host.addTab(ts4);
 
         tab_host.setCurrentTab(0);
